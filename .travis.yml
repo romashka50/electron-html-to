@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "4.1"
+  - "4.0"
+  - "0.12"
+  - "0.10"
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm install electron-prebuilt@0.36.x
+  - npm install
+addons:
+  apt:
+    packages:
+      - xvfb
